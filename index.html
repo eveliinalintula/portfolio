@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+
+<body>
+<nav>
+<a href="index.html" class="nav-logo">
+    <img src="logo.svg" alt="Eveliina">
+</a>
+<button class="menu-toggle" aria-label="Open menu">
+    <span>☰</span>
+</button>
+    <div class="nav-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Me & CV</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="hero-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-content">
+        <h1>Eveliina Lintula</h1>
+        <p>Designing ideas. Making them real.</p>
+    </div>
+</section>
+
+<img src="vaakaornamentti.svg" alt="" class="ornament">
+
+<section class="selected-work">
+    <h2>Selected work</h2>
+    <img src="kulmaornamentti.svg" alt="" class="corner-ornament">
+
+<a href="portfolio.html#drawings" class="work-item">
+    <div class="work-image">
+       <img src="drawing-01.webp" alt="Drawing">
+    </div>
+</a>
+
+<a href="portfolio.html#moving-image" class="work-item">
+    <div class="work-image">
+        <span>Moving Image</span>
+    </div>
+</a>
+
+<a href="portfolio.html#photography" class="work-item">
+    <div class="work-image">
+       <img src="photo-01.webp" alt="Photography">
+    </div>
+</a>
+
+</section>
+
+
+<footer>
+    <p>© 2026 Eveliina Lintula</p>
+</footer>
+
+<script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const menuIcon = menuButton.querySelector("span");
+
+    menuButton.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+
+        if (navLinks.classList.contains("open")) {
+            menuIcon.textContent = "×";
+            menuButton.setAttribute("aria-label", "Close menu");
+        } else {
+            menuIcon.textContent = "☰";
+            menuButton.setAttribute("aria-label", "Open menu");
+        }
+    });
+</script>
+</body>
+</html>

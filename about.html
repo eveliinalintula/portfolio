@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+
+<body>
+<nav>
+   <a href="index.html" class="nav-logo">
+    <img src="logo.svg" alt="Eveliina">
+</a>
+<button class="menu-toggle" aria-label="Open menu">
+    <span>☰</span>
+</button>
+    <div class="nav-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Me & CV</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<div class="about-layout">
+
+ <div class="about-image">
+    <img src="eveliina.jpg" alt="Eveliina">
+    <img src="kulmaornamentti.svg" alt="" class="about-corner-ornament">
+</div>
+
+    <div class="cv-sections">
+    <details>
+        <summary>About me</summary>
+        <p>I turn ideas into content that people notice, understand and remember.</p>
+        <p>I combine content creation, audiovisual communication, and project coordination. I create content across text, image, and video, while keeping the bigger picture in focus. I’m particularly interested in creating content that feels consistent and recognizable across different platforms.</p>
+        <p>I’m a structured and hands-on person who enjoys making things happen. I like planning projects, organizing moving parts, keeping track of details, and making sure ideas turn into finished results. I enjoy developing concepts, finding the right visual approach, and creating content that communicates clearly. I work independently, take ownership, and learn new tools and processes quickly.</p>
+        <p>I’m looking to grow as a communications professional in Lapland with a role where creativity and organization skills are needed.</p>
+    </details>
+
+    <details>
+        <summary>Education</summary>
+ 
+ <p>
+    <strong>2025</strong><br>
+    <strong>Master of Arts</strong><br>
+    Major: Audiovisual Mediaculture<br>
+    University of Lapland
+</p>
+       <p>
+    <strong>2022</strong><br>
+    <strong>Bachelor of Arts</strong><br>
+    Major: Audiovisual Mediaculture<br>
+    University of Lapland
+</p>
+    </details>
+
+    <details>
+        <summary>Skills</summary>
+         <p>
+        Communication<br>
+        Writing<br>
+        Teamwork<br>
+        Organisation &amp; planning<br>
+        Time management<br>
+        Independent working<br>
+        Attention to detail<br>
+        Graphic design<br>
+        Photography<br>
+        Video editing<br>
+        Web design<br>
+        HTML &amp; CSS<br>
+        Animation<br>
+        Drawing &amp; illustration
+    </p>
+    </details>
+
+    <details>
+        <summary>Tools</summary>
+         <p>
+        <strong>Design & Illustration</strong><br>
+        Inkscape · Krita · Canva · Photoshop
+    </p>
+
+    <p>
+        <strong>Video Editing</strong><br>
+        DaVinci Resolve · Premiere Pro · After Effects
+    </p>
+
+    <p>
+        <strong>Animation</strong><br>
+        Adobe Animate
+    </p>
+
+    <p>
+        <strong>Web</strong><br>
+        Adobe Dreamweaver · Visual Studio Code · HTML · CSS
+    </p>
+    </details>
+
+    <details>
+        <summary>Languages</summary>
+        <p>Finnish — Native <br>
+English — Fluent</p>
+    </details>
+    </div>
+
+</div>
+
+
+<footer>
+    <p>© 2026 Eveliina Lintula</p>
+</footer>
+<script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const menuIcon = menuButton.querySelector("span");
+
+    menuButton.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+
+        if (navLinks.classList.contains("open")) {
+            menuIcon.textContent = "×";
+            menuButton.setAttribute("aria-label", "Close menu");
+        } else {
+            menuIcon.textContent = "☰";
+            menuButton.setAttribute("aria-label", "Open menu");
+        }
+    });
+</script>
+</body>
+</html>

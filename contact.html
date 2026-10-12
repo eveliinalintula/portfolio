@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yhteys</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+
+<body>
+ <nav>
+   <a href="index.html" class="nav-logo">
+    <img src="logo.svg" alt="Eveliina">
+</a>
+<button class="menu-toggle" aria-label="Open menu">
+    <span>☰</span>
+</button>
+    <div class="nav-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Me & CV</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+    <h1>Contact</h1>
+
+<p>
+    Let's be in touch!
+</p>
+
+<p>
+eveliina.lintula97 [at] gmail.com
+</p>
+
+<footer>
+    <p>© 2026 Eveliina Lintula</p>
+</footer>
+<script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const menuIcon = menuButton.querySelector("span");
+
+    menuButton.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+
+        if (navLinks.classList.contains("open")) {
+            menuIcon.textContent = "×";
+            menuButton.setAttribute("aria-label", "Close menu");
+        } else {
+            menuIcon.textContent = "☰";
+            menuButton.setAttribute("aria-label", "Open menu");
+        }
+    });
+</script>
+</body>
+</html>
